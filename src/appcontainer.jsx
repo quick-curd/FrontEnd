@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import React, { Component } from "react";
-import config from "config";
+import config from "src/config";
 
 import { Route, Redirect, BrowserRouter as Router, Routes } from "react-router-dom";
 // import Header from "./components/header";

@@ -23,10 +23,10 @@ import SettingsOthers from "./components/settings/SettingsOthers";
 import Assests from "./components/assests/Assests";
 import AddAsset from "./components/assests/AddAsset";
 //Doctor
-import DoctorList from "./components/doctor/DoctorList";
-import AddDoctor from "./components/doctor/AddDoctor";
-import EditDoctor from "./components/doctor/EditDoctor";
-import DoctorProfile from "./components/doctor/DoctorProfile";
+import EtudiantList from "./components/etudiant/EtudiantList";
+import AddEtudiant from "./components/etudiant/AddEtudiant";
+import EditDoctor from "./components/etudiant/EditDoctor";
+import EtudiantProfile from "./components/etudiant/EtudiantProfile";
 //Patients...
 import PatientsList from "./components/patients/PatientsList";
 import AddPatients from "./components/patients/AddPatients";
@@ -174,10 +174,10 @@ const Approuter = () => {
           <Route path="/addasset" element={<AddAsset />} />
           <Route path="/edit-assets" element={<Edit_Assets />} />
           {/* Doctor  */}
-          <Route path="/doctorlist" element={<DoctorList />} />
-          <Route path="/add-doctor" element={<AddDoctor />} />
+          <Route path="/doctorlist" element={<EtudiantList />} />
+          <Route path="/add-doctor" element={<AddEtudiant />} />
           <Route path="/editdoctor" element={<EditDoctor />} />
-          <Route path="/doctorprofile" element={<DoctorProfile />} />
+          <Route path="/doctorprofile" element={<EtudiantProfile />} />
           <Route path="/doctor-setting" element={<Doctor_Settings />} />
           {/* Patients */}
           <Route path="/patientslist" element={<PatientsList />} />

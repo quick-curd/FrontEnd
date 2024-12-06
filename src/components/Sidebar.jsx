@@ -106,11 +106,11 @@ const Sidebar = (props) => {
                     <li>
                       <Link
                         className={
-                          props?.activeClassName === "doctor-dashboard"
+                          props?.activeClassName === "etudiant-dashboard"
                             ? "active"
                             : ""
                         }
-                        to="/doctor-dashboard"
+                        to="/etudiant-dashboard"
                       >
                         Doctor Dashboard
                       </Link>
@@ -152,7 +152,7 @@ const Sidebar = (props) => {
                     <li>
                       <Link
                         className={
-                          props?.activeClassName === "doctor-list"
+                          props?.activeClassName === "etudiant-list"
                             ? "active"
                             : ""
                         }
@@ -162,7 +162,7 @@ const Sidebar = (props) => {
                       </Link>
                     </li>
                     {/* <li>
-                      <Link className={props?.activeClassName === 'add-doctor' ? 'active' : ''} to="/add-doctor">Add Doctor</Link>
+                      <Link className={props?.activeClassName === 'add-etudiant' ? 'active' : ''} to="/add-etudiant">Add Doctor</Link>
                     </li> */}
                     <li>
 

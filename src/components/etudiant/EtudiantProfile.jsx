@@ -6,7 +6,7 @@ import FeatherIcon from "feather-icons-react";
 import { Link } from 'react-router-dom';
 
 
-const DoctorProfile = () => {
+const EtudiantProfile = () => {
   return (
     <div>
 
@@ -705,4 +705,4 @@ const DoctorProfile = () => {
   )
 }
 
-export default DoctorProfile;
+export default EtudiantProfile;

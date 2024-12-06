@@ -602,7 +602,7 @@ const Patient_Dashboard = () => {
               <div className="col-12 col-md-12 col-xl-5">
                 {/* <div className="card flex-fill mb-2">
                   <div className="card-body">
-                    <div id="calendar-doctor" className="calendar-container" />
+                    <div id="calendar-etudiant" className="calendar-container" />
                   </div>
                 </div> */}
                 <div className="treat-box mb-2">
