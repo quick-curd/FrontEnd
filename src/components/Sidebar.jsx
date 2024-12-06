@@ -141,7 +141,7 @@ const Sidebar = (props) => {
                     <span className="menu-side">
                       <img src={doctor} alt="" />
                     </span>{" "}
-                    <span> Doctors </span> <span className="menu-arrow" />
+                    <span> Etudiants </span> <span className="menu-arrow" />
                   </Link>
                   <ul
                     style={{
@@ -158,89 +158,21 @@ const Sidebar = (props) => {
                         }
                         to="/doctorlist"
                       >
-                        Doctor List
+                        Liste Etudiants 
                       </Link>
                     </li>
                     {/* <li>
                       <Link className={props?.activeClassName === 'add-doctor' ? 'active' : ''} to="/add-doctor">Add Doctor</Link>
                     </li> */}
                     <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "edit-doctor"
-                            ? "active"
-                            : ""
-                        }
-                        to="/editdoctor"
-                      >
-                        Edit Doctor
-                      </Link>
+
                     </li>
                     <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "doctor-profile"
-                            ? "active"
-                            : ""
-                        }
-                        to="/doctorprofile"
-                      >
-                        Doctor Profile
-                      </Link>
+
                     </li>
                   </ul>
                 </li>
-                <li className="submenu">
-                  <Link
-                    to="#"
-                    id="menu-item2"
-                    onClick={(e) => handleClick(e, "menu-item2", "menu-items2")}
-                  >
-                    <span className="menu-side">
-                      <img src={patients} alt="" />
-                    </span>{" "}
-                    <span>Patients </span> <span className="menu-arrow" />
-                  </Link>
-                  <ul style={{ display: "none" }} className="menu-items2">
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "patient-list"
-                            ? "active"
-                            : ""
-                        }
-                        to="/patientslist"
-                      >
-                        Patients List
-                      </Link>
-                    </li>
-                    {/* <li>
-                      <Link className={props?.activeClassName === 'add-patient' ? 'active' : ''} to="/addpatients">Add Patients</Link>
-                    </li> */}
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "edit-patient"
-                            ? "active"
-                            : ""
-                        }
-                        to="/editpatients"
-                      >
-                        Edit Patients
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "patient" ? "active" : ""
-                        }
-                        to="/patientsprofile"
-                      >
-                        Patients Profile
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                
                 {/* <li className="submenu">
                   <Link to="#" id="menu-item3" onClick={(e) => handleClick(e, "menu-item3", "menu-items3")}>
                     <span className="menu-side">
@@ -369,35 +301,7 @@ const Sidebar = (props) => {
                     </li>
                   </ul>
                 </li> */}
-                <li className="submenu">
-                  <Link
-                    to="#"
-                    id="menu-item10"
-                    onClick={(e) =>
-                      handleClick(e, "menu-item10", "menu-items10")
-                    }
-                  >
-                    <span className="menu-side">
-                      <img src={menuicon12} alt="" />
-                    </span>{" "}
-                    <span> Messages</span> <span className="menu-arrow" />
-                  </Link>
-                  <ul style={{ display: "none" }} className="menu-items10">
-                    {/* <li>
-                      <Link className={props?.activeClassName === 'compose-mail' ? 'active' : ''} to="/compose-mail">Compose Mail</Link>
-                    </li> */}
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "inbox" ? "active" : ""
-                        }
-                        to="/inbox"
-                      >
-                        Inbox
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                
                 <li className="submenu">
                   <Link
                     to="/login"
@@ -409,7 +313,7 @@ const Sidebar = (props) => {
                     <span className="menu-side">
                       <img src={logout} alt="" />
                     </span>{" "}
-                    <span>Logout</span> <span className="menu-arrow" />
+                    <span>Se deconnecter</span> <span className="menu-arrow" />
                   </Link>
                 </li>
                 {/* <li className="submenu">

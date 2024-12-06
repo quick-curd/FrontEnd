@@ -139,8 +139,8 @@ const DoctorList = () => {
   ];
   const columns = [
     {
-      title: "Name",
-      dataIndex: "Name",
+      title: "NO_ETUDIANT_NAT",
+      dataIndex: "NO_ETUDIANT_NAT",
       render: (text, record) => (
         <>
           <h2 className="profile-image">
@@ -151,46 +151,145 @@ const DoctorList = () => {
                 alt="User Image"
               />
             </Link>
-            <Link to="#">{record.Name}</Link>
+            <Link to="#">{record.NO_ETUDIANT_NAT}</Link>
           </h2>
         </>
       ),
-      sorter: (a, b) => a.Name.length - b.Name.length,
+      sorter: (a, b) => a.NO_ETUDIANT_NAT.length - b.NO_ETUDIANT_NAT.length,
     },
     {
-      title: "Department",
-      dataIndex: "Department",
-      sorter: (a, b) => a.Department.length - b.Department.length,
+      title: "ANNEE_PRO",
+      dataIndex: "ANNEE_PRO",
+      sorter: (a, b) => a.ANNEE_PRO.length - b.ANNEE_PRO.length,
     },
     {
-      title: "Specialization",
-      dataIndex: "Specialization",
-      sorter: (a, b) => a.Specialization.length - b.Specialization.length,
+      title: "CODE_COM",
+      dataIndex: "CODE_COM",
+      sorter: (a, b) => a.CODE_COM.length - b.CODE_COM.length,
     },
     {
-      title: "Degree",
-      dataIndex: "Degree",
-      sorter: (a, b) => a.Degree.length - b.Degree.length,
+      title: "NO_ETUDIANT_UBO",
+      dataIndex: "NO_ETUDIANT_UBO",
+      sorter: (a, b) => a.NO_ETUDIANT_UBO.length - b.NO_ETUDIANT_UBO.length,
     },
     {
-      title: "Mobile",
-      dataIndex: "Mobile",
-      sorter: (a, b) => a.Mobile.length - b.Mobile.length,
-      render: (text, record) => (
-        <>
-          <Link to="#">{record.Mobile}</Link>
-        </>
-      ),
+      title: "SEXE",
+      dataIndex: "SEXE",
+      sorter: (a, b) => a.SEXE.length - b.SEXE.length,
     },
     {
-      title: "Email",
-      dataIndex: "Email",
-      sorter: (a, b) => a.Email.length - b.Email.length,
+      title: "NOM",
+      dataIndex: "NOM",
+      sorter: (a, b) => a.NOM.length - b.NOM.length,
     },
     {
-      title: "JoiningDate",
-      dataIndex: "JoiningDate",
-      sorter: (a, b) => a.JoiningDate.length - b.JoiningDate.length,
+      title: "PRENOM",
+      dataIndex: "PRENOM",
+      sorter: (a, b) => a.PRENOM.length - b.PRENOM.length,
+    },
+    {
+      title: "DATE_NAISSANCE",
+      dataIndex: "DATE_NAISSANCE",
+      sorter: (a, b) => a.DATE_NAISSANCE.length - b.DATE_NAISSANCE.length,
+    }, {
+      title: "LIEU_NAISSANCE",
+      dataIndex: "LIEU_NAISSANCE",
+      sorter: (a, b) => a.LIEU_NAISSANCE.length - b.LIEU_NAISSANCE.length,
+    }, {
+      title: "SITUATION",
+      dataIndex: "SITUATION",
+      sorter: (a, b) => a.SITUATION.length - b.SITUATION.length,
+    }, {
+      title: "NATIONALITE",
+      dataIndex: "NATIONALITE",
+      sorter: (a, b) => a.NATIONALITE.length - b.NATIONALITE.length,
+    }, {
+      title: "TEL_PORT",
+      dataIndex: "TEL_PORT",
+      sorter: (a, b) => a.TEL_PORT.length - b.TEL_PORT.length,
+    }, {
+      title: "TEL_FIXE",
+      dataIndex: "TEL_FIXE",
+      sorter: (a, b) => a.TEL_FIXE.length - b.TEL_FIXE.length,
+    }, {
+      title: "EMAIL",
+      dataIndex: "EMAIL",
+      sorter: (a, b) => a.EMAIL.length - b.EMAIL.length,
+    }, {
+      title: "ACTU_ADRESSE",
+      dataIndex: "ACTU_ADRESSE",
+      sorter: (a, b) => a.ACTU_ADRESSE.length - b.ACTU_ADRESSE.length,
+    }, {
+      title: "ACTU_CP",
+      dataIndex: "ACTU_CP",
+      sorter: (a, b) => a.ACTU_CP.length - b.ACTU_CP.length,
+    },
+    {
+      title: "ACTU_PAYS",
+      dataIndex: "ACTU_PAYS",
+      sorter: (a, b) => a.ACTU_PAYS.length - b.ACTU_PAYS.length,
+    },
+    {
+      title: "PERM_ADRESSE",
+      dataIndex: "PERM_ADRESSE",
+      sorter: (a, b) => a.PERM_ADRESSE.length - b.PERM_ADRESSE.length,
+    },
+    {
+      title: "PERM_CP",
+      dataIndex: "PERM_CP",
+      sorter: (a, b) => a.PERM_CP.length - b.PERM_CP.length,
+    },
+    {
+      title: "ACTU_CP",
+      dataIndex: "ACTU_CP",
+      sorter: (a, b) => a.ACTU_CP.length - b.ACTU_CP.length,
+    },
+    {
+      title: "PERM_VILLE",
+      dataIndex: "PERM_VILLE",
+      sorter: (a, b) => a.PERM_VILLE.length - b.PERM_VILLE.length,
+    },
+    {
+      title: "PERM_PAYS",
+      dataIndex: "PERM_PAYS",
+      sorter: (a, b) => a.PERM_PAYS.length - b.PERM_PAYS.length,
+    },{
+      title: "DERNIER_DIPLOME",
+      dataIndex: "DERNIER_DIPLOME",
+      sorter: (a, b) => a.DERNIER_DIPLOME.length - b.DERNIER_DIPLOME.length,
+    },{
+      title: "UNIVERSITE",
+      dataIndex: "UNIVERSITE",
+      sorter: (a, b) => a.UNIVERSITE.length - b.UNIVERSITE.length,
+    },{
+      title: "SIGLE_ETU",
+      dataIndex: "SIGLE_ETU",
+      sorter: (a, b) => a.SIGLE_ETU.length - b.SIGLE_ETU.length,
+    },{
+      title: "COMPTE_CRI",
+      dataIndex: "COMPTE_CRI",
+      sorter: (a, b) => a.COMPTE_CRI.length - b.COMPTE_CRI.length,
+    },{
+      title: "UBO_EMAIL",
+      dataIndex: "UBO_EMAIL",
+      sorter: (a, b) => a.UBO_EMAIL.length - b.UBO_EMAIL.length,
+    },{
+      title: "GRPE_ANGLAIS",
+      dataIndex: "GRPE_ANGLAIS",
+      sorter: (a, b) => a.GRPE_ANGLAIS.length - b.GRPE_ANGLAIS.length,
+    },{
+      title: "ABANDON_MOTIF",
+      dataIndex: "ABANDON_MOTIF",
+      sorter: (a, b) => a.ABANDON_MOTIF.length - b.ABANDON_MOTIF.length,
+    },
+    {
+      title: "ABANDON_DATE",
+      dataIndex: "ABANDON_DATE",
+      sorter: (a, b) => a.ABANDON_DATE.length - b.ABANDON_DATE.length,
+    },{
+      title: "EST_DIPLOME",
+      dataIndex: "EST_DIPLOME",
+      sorter: (a, b) => a.EST_DIPLOME.length - b.EST_DIPLOME.length,
     },
     {
       title: "",
