@@ -56,7 +56,7 @@ const Sidebar = (props) => {
           autoHide
           autoHideTimeout={1000}
           autoHideDuration={200}
-          autoHeight
+          autoHeight 
           autoHeightMin={0}
           autoHeightMax="95vh"
           thumbMinSize={30}
