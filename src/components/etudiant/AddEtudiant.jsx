@@ -57,6 +57,7 @@ const AddEtudiant = () => {
       const response = await fetch(BACKEND_URL+"/api/etudiants", {
         method: "POST",
         headers: {
+          "ngrok-skip-browser-warning":"",
           "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
@@ -106,7 +107,7 @@ const AddEtudiant = () => {
                           <label>
                             No Etudiant Nat <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="noEtudiantNat" value={formData.noEtudiantNat} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="noEtudiantNat" value={formData.noEtudiantNat} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -114,7 +115,7 @@ const AddEtudiant = () => {
                           <label>
                             Annee Pro <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="anneePro" value={formData.anneePro} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="anneePro" value={formData.anneePro} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -138,7 +139,7 @@ const AddEtudiant = () => {
                           <label>
                             Sexe <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="sexe" value={formData.sexe} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="sexe" value={formData.sexe} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -146,7 +147,7 @@ const AddEtudiant = () => {
                           <label>
                             Nom <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="nom" value={formData.nom} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="nom" value={formData.nom} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -154,7 +155,7 @@ const AddEtudiant = () => {
                           <label>
                             Prenom <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="prenom" value={formData.prenom} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="prenom" value={formData.prenom} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -177,7 +178,7 @@ const AddEtudiant = () => {
                           <label>
                             Lieu Naissance <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="lieuNaissance" value={formData.lieuNaissance} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="lieuNaissance" value={formData.lieuNaissance} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -185,7 +186,7 @@ const AddEtudiant = () => {
                           <label>
                             Situation <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="situation" value={formData.situation} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="situation" value={formData.situation} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -193,7 +194,7 @@ const AddEtudiant = () => {
                           <label>
                             Nationalite <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="nationalite" value={formData.nationalite} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="nationalite" value={formData.nationalite} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -257,7 +258,7 @@ const AddEtudiant = () => {
                           <label>
                             Perm Adresse <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="permAdresse" value={formData.permAdresse} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="permAdresse" value={formData.permAdresse} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -265,7 +266,7 @@ const AddEtudiant = () => {
                           <label>
                             Perm Cp <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="permCp" value={formData.permCp} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="permCp" value={formData.permCp} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -273,7 +274,7 @@ const AddEtudiant = () => {
                           <label>
                             Perm Ville <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="permVille" value={formData.permVille} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="permVille" value={formData.permVille} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -281,7 +282,7 @@ const AddEtudiant = () => {
                           <label>
                             Perm Pays <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="permPays" value={formData.permPays} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="permPays" value={formData.permPays} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -289,7 +290,7 @@ const AddEtudiant = () => {
                           <label>
                             Dernier Diplome <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="dernierDiplome" value={formData.dernierDiplome} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="dernierDiplome" value={formData.dernierDiplome} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -297,7 +298,7 @@ const AddEtudiant = () => {
                           <label>
                             Universite <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="universite" value={formData.universite} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="universite" value={formData.universite} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -305,7 +306,7 @@ const AddEtudiant = () => {
                           <label>
                             Sigle Etu <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="sigleEtu" value={formData.sigleEtu} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="sigleEtu" value={formData.sigleEtu} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -313,7 +314,7 @@ const AddEtudiant = () => {
                           <label>
                             Compte Cri <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="compteCri" value={formData.compteCri} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="compteCri" value={formData.compteCri} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12 col-md-6 col-xl-4">
@@ -360,7 +361,7 @@ const AddEtudiant = () => {
                           <label>
                             Est Diplome <span className="login-danger">*</span>
                           </label>
-                          <input className="form-control" type="text" name="estDiplome" value={formData.estDiplome} onChange={handleInputChange} required />
+                          <input className="form-control" type="text" name="estDiplome" value={formData.estDiplome} onChange={handleInputChange}  />
                         </div>
                       </div>
                       <div className="col-12">

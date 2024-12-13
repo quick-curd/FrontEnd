@@ -156,7 +156,7 @@ const Sidebar = (props) => {
                             ? "active"
                             : ""
                         }
-                        to="/doctorlist"
+                        to="/etudiantlist"
                       >
                         Liste Etudiants 
                       </Link>
@@ -172,7 +172,7 @@ const Sidebar = (props) => {
                     </li>
                   </ul>
                 </li>
-                
+               
                 {/* <li className="submenu">
                   <Link to="#" id="menu-item3" onClick={(e) => handleClick(e, "menu-item3", "menu-items3")}>
                     <span className="menu-side">
@@ -304,7 +304,7 @@ const Sidebar = (props) => {
                 
                 <li className="submenu">
                   <Link
-                    to="/login"
+                    to="/"
                     id="menu-item10"
                     onClick={(e) =>
                       handleClick(e, "menu-item10", "menu-items10")

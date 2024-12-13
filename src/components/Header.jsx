@@ -57,7 +57,7 @@ const Header = () => {
     <div className="main-wrapper">
       <div className="header">
         <div className="header-left">
-          <Link to="/admin-dashboard" className="logo">
+          <Link to="/" className="logo">
             <span>CRUD</span>
           </Link>
         </div>
@@ -69,14 +69,6 @@ const Header = () => {
         </Link>
         <ul className="nav user-menu float-end">
           <li className="nav-item dropdown d-none d-sm-block">
-            <Link
-              to="#"
-              className="dropdown-toggle nav-link"
-              data-bs-toggle="dropdown"
-            >
-              <img src={noteicon} alt="" />
-              <span className="pulse" />{" "}
-            </Link>
             <div className="dropdown-menu notifications">
               <div className="topnav-dropdown-header">
                 <span>Notifications</span>
@@ -199,14 +191,8 @@ const Header = () => {
             </div>
           </li>
           <li className="nav-item dropdown d-none d-sm-block">
-            <Link
-              onClick={openDrawer}
-              id="open_msg_box"
-              className="hasnotifications nav-link"
-            >
-              <img src={noteicon1} alt="" />
-              <span className="pulse" />{" "}
-            </Link>
+            
+              
           </li>
           {/* <li className="nav-item dropdown has-arrow user-profile-list">
             <Link

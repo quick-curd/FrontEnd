@@ -90,7 +90,7 @@ const Admin_Dashboard = () => {
                     <img src={calendar} alt="#" />
                   </div>
                   <div className="dash-content dash-count flex-grow-1">
-                    <h4>Doctors</h4>
+                    <h4>Etudiants</h4>
                     <h2>
                       {" "}
                       <CountUp delay={0.4} end={1270} duration={0.6} />

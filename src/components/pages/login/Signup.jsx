@@ -48,7 +48,7 @@ const Signup = () => {
                   <div className="login-right">
                     <div className="login-right-wrap">
                       <div className="account-logo">
-                        <Link to="/admin-dashboard">
+                        <Link to="/">
                           <img src={loginlogo}alt="#"/>
                         </Link>
                       </div>

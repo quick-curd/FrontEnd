@@ -113,7 +113,6 @@ import Profile from "./components/pages/login/Profile";
 import EditProfile from "./components/pages/login/EditProfile";
 import BlankPage from "./components/pages/login/BlankPage";
 import Doctor_Dashboard from "./components/Dashboard/Doctor_Dashboard/Doctor_Dashboard";
-import Admin_Dashboard from "./components/Dashboard/Admin_Dashboard/Admin_Dashboard";
 import Patient_Dashboard from "./components/Dashboard/Patient_Dashboard/Patient_Dashboard";
 import Doctor_Settings from "./components/Dashboard/Doctor_Dashboard/Doctor_Settings";
 import Patient_Settings from "./components/patients/Patient_Settings";
@@ -134,7 +133,6 @@ const Approuter = () => {
     <>
       <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/signup" element={<Signup />} />
@@ -174,7 +172,7 @@ const Approuter = () => {
           <Route path="/addasset" element={<AddAsset />} />
           <Route path="/edit-assets" element={<Edit_Assets />} />
           {/* Doctor  */}
-          <Route path="/doctorlist" element={<EtudiantList />} />
+          <Route path="/etudiantlist" element={<EtudiantList />} />
           <Route path="/add-doctor" element={<AddEtudiant />} />
           <Route path="/editdoctor" element={<EditEtudiant />} />
           <Route path="/doctorprofile" element={<EtudiantProfile />} />
@@ -276,7 +274,7 @@ const Approuter = () => {
           {/* Calender */}
           <Route path="/calender" element={<Calender />} />
           {/* Dashboard */}
-          <Route path="/admin-dashboard" element={<Admin_Dashboard />} />
+          <Route path="/" element={<EtudiantList />} />
           <Route path="/doctor-dashboard" element={<Doctor_Dashboard />} />
           <Route path="/patient-dashboard" element={<Patient_Dashboard />} />
         </Routes>

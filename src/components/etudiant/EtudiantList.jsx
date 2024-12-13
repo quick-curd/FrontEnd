@@ -174,14 +174,14 @@ const EtudiantList = () => {
                                 <div className="col-sm-12">
                                     <ul className="breadcrumb">
                                         <li className="breadcrumb-item">
-                                            <Link to="#">Doctors </Link>
+                                            <Link to="#">Etudiants </Link>
                                         </li>
                                         <li className="breadcrumb-item">
                                             <i className="feather-chevron-right">
                                                 <FeatherIcon icon="chevron-right"/>
                                             </i>
                                         </li>
-                                        <li className="breadcrumb-item active">Doctors List</li>
+                                        <li className="breadcrumb-item active">E List</li>
                                     </ul>
                                 </div>
                             </div>
@@ -196,7 +196,7 @@ const EtudiantList = () => {
                                             <div className="row align-items-center">
                                                 <div className="col">
                                                     <div className="doctor-table-blk">
-                                                        <h3>Doctors List</h3>
+                                                        <h3>Etudiants List</h3>
                                                         <div className="doctor-search-blk">
                                                             <div className="top-nav-search table-search-blk">
                                                                 <form>

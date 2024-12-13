@@ -57,7 +57,7 @@ const Login = () => {
                   <div className="login-right">
                     <div className="login-right-wrap">
                       <div className="account-logo">
-                        <Link to="/admin-dashboard">
+                        <Link to="/">
                           <img src={loginlogo} alt="#" />
                         </Link>
                       </div>
@@ -99,7 +99,7 @@ const Login = () => {
                           <Link to="/forgotpassword">Forgot Password?</Link>
                         </div>
                         <div className="form-group login-btn">
-                          <Link to="/doctorlist"
+                          <Link to="/etudiantlist"
                             className="btn btn-primary btn-block"
 
                           >

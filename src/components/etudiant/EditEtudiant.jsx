@@ -58,7 +58,7 @@ const EditEtudiant = () => {
                 <div className="col-sm-12">
                   <ul className="breadcrumb">
                     <li className="breadcrumb-item">
-                      <Link to="#">Doctors </Link>
+                      <Link to="#">Etudiants </Link>
                     </li>
                     <li className="breadcrumb-item">
                       <i className="feather-chevron-right">
