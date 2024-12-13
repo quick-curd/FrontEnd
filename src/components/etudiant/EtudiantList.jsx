@@ -5,13 +5,7 @@ import {onShowSizeChange, itemRender} from "../Pagination";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 import {
-    imagesend,
-    pdficon,
-    pdficon3,
-    pdficon4,
-    plusicon,
-    refreshicon,
-    searchnormal,
+    imagesend, pdficon, pdficon3, pdficon4, plusicon, refreshicon, searchnormal,
 } from "../imagepath";
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -28,8 +22,7 @@ const EtudiantList = () => {
     };
 
     const rowSelection = {
-        selectedRowKeys,
-        onChange: onSelectChange,
+        selectedRowKeys, onChange: onSelectChange,
     };
     const onChange = (date, dateString) => {
         // console.log(date, dateString);
@@ -54,198 +47,118 @@ const EtudiantList = () => {
 
     }, [])
 
-    const columns = [
-        {
-            title: "NO_ETUDIANT_NAT",
-            dataIndex: "NO_ETUDIANT_NAT",
-            render: (text, record) => (
-                <>
-                    <h2 className="profile-image">
-                        <Link to="#" className="avatar avatar-sm me-2">
-                            <img
-                                className="avatar-img rounded-circle"
-                                src={record.Img}
-                                alt="User Image"
-                            />
+    const columns = [{
+        title: "NO_ETUDIANT_NAT", dataIndex: "noEtudiantNat", render: (text, record) => (<>
+                <h2 className="profile-image">
+                    <Link to="#" className="avatar avatar-sm me-2">
+                        <img
+                            className="avatar-img rounded-circle"
+                            src={record.Img}
+                            alt="User Image"
+                        />
+                    </Link>
+                    <Link to="#">{record.noEtudiantNat}</Link>
+                </h2>
+            </>), sorter: (a, b) => a.noEtudiantNat.length - b.noEtudiantNat.length,
+    }, {
+        title: "ANNEE_PRO", dataIndex: "anneePro", sorter: (a, b) => a.anneePro.length - b.anneePro.length,
+    }, {
+        title: "CODE_COM", dataIndex: "codeCom", sorter: (a, b) => a.codeCom.length - b.codeCom.length,
+    }, {
+        title: "NO_ETUDIANT_UBO",
+        dataIndex: "noEtudiantUbo",
+        sorter: (a, b) => a.noEtudiantUbo.length - b.noEtudiantUbo.length,
+    }, {
+        title: "SEXE", dataIndex: "sexe", sorter: (a, b) => a.sexe.length - b.sexe.length,
+    }, {
+        title: "NOM", dataIndex: "nom", sorter: (a, b) => a.nom.length - b.nom.length,
+    }, {
+        title: "PRENOM", dataIndex: "prenom", sorter: (a, b) => a.prenom.length - b.prenom.length,
+    }, {
+        title: "DATE_NAISSANCE",
+        dataIndex: "dateNaissance",
+        sorter: (a, b) => a.dateNaissance.length - b.dateNaissance.length,
+    }, {
+        title: "LIEU_NAISSANCE",
+        dataIndex: "lieuNaissance",
+        sorter: (a, b) => a.lieuNaissance.length - b.lieuNaissance.length,
+    }, {
+        title: "SITUATION", dataIndex: "situation", sorter: (a, b) => a.situation.length - b.situation.length,
+    }, {
+        title: "NATIONALITE", dataIndex: "nationalite", sorter: (a, b) => a.nationalite.length - b.nationalite.length,
+    }, {
+        title: "TEL_PORT", dataIndex: "telPort", sorter: (a, b) => a.telPort.length - b.telPort.length,
+    }, {
+        title: "TEL_FIXE", dataIndex: "telFixe", sorter: (a, b) => a.telFixe.length - b.telFixe.length,
+    }, {
+        title: "EMAIL", dataIndex: "email", sorter: (a, b) => a.email.length - b.email.length,
+    }, {
+        title: "ACTU_ADRESSE", dataIndex: "actuAdresse", sorter: (a, b) => a.actuAdresse.length - b.actuAdresse.length,
+    }, {
+        title: "ACTU_CP", dataIndex: "actuCp", sorter: (a, b) => a.actuCp.length - b.actuCp.length,
+    }, {
+        title: "ACTU_PAYS", dataIndex: "actuPays", sorter: (a, b) => a.actuPays.length - b.actuPays.length,
+    }, {
+        title: "PERM_ADRESSE", dataIndex: "permAdresse", sorter: (a, b) => a.permAdresse.length - b.permAdresse.length,
+    }, {
+        title: "PERM_CP", dataIndex: "permCp", sorter: (a, b) => a.permCp.length - b.permCp.length,
+    }, {
+        title: "PERM_VILLE", dataIndex: "permVille", sorter: (a, b) => a.permVille.length - b.permVille.length,
+    }, {
+        title: "PERM_PAYS", dataIndex: "permPays", sorter: (a, b) => a.permPays.length - b.permPays.length,
+    }, {
+        title: "DERNIER_DIPLOME",
+        dataIndex: "dernierDiplome",
+        sorter: (a, b) => a.dernierDiplome.length - b.dernierDiplome.length,
+    }, {
+        title: "UNIVERSITE", dataIndex: "universite", sorter: (a, b) => a.universite.length - b.universite.length,
+    }, {
+        title: "SIGLE_ETU", dataIndex: "sigleEtu", sorter: (a, b) => a.sigleEtu.length - b.sigleEtu.length,
+    }, {
+        title: "COMPTE_CRI", dataIndex: "compteCri", sorter: (a, b) => a.compteCri.length - b.compteCri.length,
+    }, {
+        title: "UBO_EMAIL", dataIndex: "uboEmail", sorter: (a, b) => a.uboEmail.length - b.uboEmail.length,
+    }, {
+        title: "GRPE_ANGLAIS", dataIndex: "grpeAnglais", sorter: (a, b) => a.grpeAnglais.length - b.grpeAnglais.length,
+    }, {
+        title: "ABANDON_MOTIF",
+        dataIndex: "abandonMotif",
+        sorter: (a, b) => a.abandonMotif.length - b.abandonMotif.length,
+    }, {
+        title: "ABANDON_DATE", dataIndex: "abandonDate", sorter: (a, b) => a.abandonDate.length - b.abandonDate.length,
+    }, {
+        title: "EST_DIPLOME", dataIndex: "estDiplome", sorter: (a, b) => a.estDiplome.length - b.estDiplome.length,
+    }, {
+        title: "", dataIndex: "FIELD8", render: (text, record) => (<>
+                <div className="text-end">
+                    <div className="dropdown dropdown-action">
+                        <Link
+                            to="#"
+                            className="action-icon dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <i className="fas fa-ellipsis-v"/>
                         </Link>
-                        <Link to="#">{record.NO_ETUDIANT_NAT}</Link>
-                    </h2>
-                </>
-            ),
-            sorter: (a, b) => a.NO_ETUDIANT_NAT.length - b.NO_ETUDIANT_NAT.length,
-        },
-        {
-            title: "ANNEE_PRO",
-            dataIndex: "ANNEE_PRO",
-            sorter: (a, b) => a.ANNEE_PRO.length - b.ANNEE_PRO.length,
-        },
-        {
-            title: "CODE_COM",
-            dataIndex: "CODE_COM",
-            sorter: (a, b) => a.CODE_COM.length - b.CODE_COM.length,
-        },
-        {
-            title: "NO_ETUDIANT_UBO",
-            dataIndex: "NO_ETUDIANT_UBO",
-            sorter: (a, b) => a.NO_ETUDIANT_UBO.length - b.NO_ETUDIANT_UBO.length,
-        },
-        {
-            title: "SEXE",
-            dataIndex: "SEXE",
-            sorter: (a, b) => a.SEXE.length - b.SEXE.length,
-        },
-        {
-            title: "NOM",
-            dataIndex: "NOM",
-            sorter: (a, b) => a.NOM.length - b.NOM.length,
-        },
-        {
-            title: "PRENOM",
-            dataIndex: "PRENOM",
-            sorter: (a, b) => a.PRENOM.length - b.PRENOM.length,
-        },
-        {
-            title: "DATE_NAISSANCE",
-            dataIndex: "DATE_NAISSANCE",
-            sorter: (a, b) => a.DATE_NAISSANCE.length - b.DATE_NAISSANCE.length,
-        }, {
-            title: "LIEU_NAISSANCE",
-            dataIndex: "LIEU_NAISSANCE",
-            sorter: (a, b) => a.LIEU_NAISSANCE.length - b.LIEU_NAISSANCE.length,
-        }, {
-            title: "SITUATION",
-            dataIndex: "SITUATION",
-            sorter: (a, b) => a.SITUATION.length - b.SITUATION.length,
-        }, {
-            title: "NATIONALITE",
-            dataIndex: "NATIONALITE",
-            sorter: (a, b) => a.NATIONALITE.length - b.NATIONALITE.length,
-        }, {
-            title: "TEL_PORT",
-            dataIndex: "TEL_PORT",
-            sorter: (a, b) => a.TEL_PORT.length - b.TEL_PORT.length,
-        }, {
-            title: "TEL_FIXE",
-            dataIndex: "TEL_FIXE",
-            sorter: (a, b) => a.TEL_FIXE.length - b.TEL_FIXE.length,
-        }, {
-            title: "EMAIL",
-            dataIndex: "EMAIL",
-            sorter: (a, b) => a.EMAIL.length - b.EMAIL.length,
-        }, {
-            title: "ACTU_ADRESSE",
-            dataIndex: "ACTU_ADRESSE",
-            sorter: (a, b) => a.ACTU_ADRESSE.length - b.ACTU_ADRESSE.length,
-        }, {
-            title: "ACTU_CP",
-            dataIndex: "ACTU_CP",
-            sorter: (a, b) => a.ACTU_CP.length - b.ACTU_CP.length,
-        },
-        {
-            title: "ACTU_PAYS",
-            dataIndex: "ACTU_PAYS",
-            sorter: (a, b) => a.ACTU_PAYS.length - b.ACTU_PAYS.length,
-        },
-        {
-            title: "PERM_ADRESSE",
-            dataIndex: "PERM_ADRESSE",
-            sorter: (a, b) => a.PERM_ADRESSE.length - b.PERM_ADRESSE.length,
-        },
-        {
-            title: "PERM_CP",
-            dataIndex: "PERM_CP",
-            sorter: (a, b) => a.PERM_CP.length - b.PERM_CP.length,
-        },
-        {
-            title: "ACTU_CP",
-            dataIndex: "ACTU_CP",
-            sorter: (a, b) => a.ACTU_CP.length - b.ACTU_CP.length,
-        },
-        {
-            title: "PERM_VILLE",
-            dataIndex: "PERM_VILLE",
-            sorter: (a, b) => a.PERM_VILLE.length - b.PERM_VILLE.length,
-        },
-        {
-            title: "PERM_PAYS",
-            dataIndex: "PERM_PAYS",
-            sorter: (a, b) => a.PERM_PAYS.length - b.PERM_PAYS.length,
-        }, {
-            title: "DERNIER_DIPLOME",
-            dataIndex: "DERNIER_DIPLOME",
-            sorter: (a, b) => a.DERNIER_DIPLOME.length - b.DERNIER_DIPLOME.length,
-        }, {
-            title: "UNIVERSITE",
-            dataIndex: "UNIVERSITE",
-            sorter: (a, b) => a.UNIVERSITE.length - b.UNIVERSITE.length,
-        }, {
-            title: "SIGLE_ETU",
-            dataIndex: "SIGLE_ETU",
-            sorter: (a, b) => a.SIGLE_ETU.length - b.SIGLE_ETU.length,
-        }, {
-            title: "COMPTE_CRI",
-            dataIndex: "COMPTE_CRI",
-            sorter: (a, b) => a.COMPTE_CRI.length - b.COMPTE_CRI.length,
-        }, {
-            title: "UBO_EMAIL",
-            dataIndex: "UBO_EMAIL",
-            sorter: (a, b) => a.UBO_EMAIL.length - b.UBO_EMAIL.length,
-        }, {
-            title: "GRPE_ANGLAIS",
-            dataIndex: "GRPE_ANGLAIS",
-            sorter: (a, b) => a.GRPE_ANGLAIS.length - b.GRPE_ANGLAIS.length,
-        }, {
-            title: "ABANDON_MOTIF",
-            dataIndex: "ABANDON_MOTIF",
-            sorter: (a, b) => a.ABANDON_MOTIF.length - b.ABANDON_MOTIF.length,
-        },
-        {
-            title: "ABANDON_DATE",
-            dataIndex: "ABANDON_DATE",
-            sorter: (a, b) => a.ABANDON_DATE.length - b.ABANDON_DATE.length,
-        }, {
-            title: "EST_DIPLOME",
-            dataIndex: "EST_DIPLOME",
-            sorter: (a, b) => a.EST_DIPLOME.length - b.EST_DIPLOME.length,
-        },
-        {
-            title: "",
-            dataIndex: "FIELD8",
-            render: (text, record) => (
-                <>
-                    <div className="text-end">
-                        <div className="dropdown dropdown-action">
-                            <Link
-                                to="#"
-                                className="action-icon dropdown-toggle"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                <i className="fas fa-ellipsis-v"/>
+                        <div className="dropdown-menu dropdown-menu-end">
+                            <Link className="dropdown-item" to="/editdoctor">
+                                <i className="far fa-edit me-2"/>
+                                Edit
                             </Link>
-                            <div className="dropdown-menu dropdown-menu-end">
-                                <Link className="dropdown-item" to="/editdoctor">
-                                    <i className="far fa-edit me-2"/>
-                                    Edit
-                                </Link>
-                                <Link
-                                    className="dropdown-item"
-                                    to="#"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#delete_patient"
-                                >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
-                                </Link>
-                            </div>
+                            <Link
+                                className="dropdown-item"
+                                to="#"
+                                data-bs-toggle="modal"
+                                data-bs-target="#delete_patient"
+                            >
+                                <i className="fa fa-trash-alt m-r-5"></i> Delete
+                            </Link>
                         </div>
                     </div>
-                </>
-            ),
-        },
-    ];
-
-    return (
-        <>
+                </div>
+            </>),
+    },];
+    return (<>
             <Header/>
             <Sidebar
                 id="menu-item1"
@@ -333,9 +246,7 @@ const EtudiantList = () => {
                                             <Table
                                                 pagination={{
                                                     total: datasource.length,
-                                                    showTotal: (total, range) =>
-                                                        `Showing ${range[0]} to ${range[1]} of ${total} entries`,
-                                                    // showSizeChanger: true,
+                                                    showTotal: (total, range) => `Showing ${range[0]} to ${range[1]} of ${total} entries`, // showSizeChanger: true,
                                                     onShowSizeChange: onShowSizeChange,
                                                     itemRender: itemRender,
                                                 }}
@@ -663,8 +574,7 @@ const EtudiantList = () => {
             </>
 
             <></>
-        </>
-    );
+        </>);
 };
 
 export default EtudiantList;

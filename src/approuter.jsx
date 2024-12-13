@@ -25,7 +25,7 @@ import AddAsset from "./components/assests/AddAsset";
 //Doctor
 import EtudiantList from "./components/etudiant/EtudiantList";
 import AddEtudiant from "./components/etudiant/AddEtudiant";
-import EditDoctor from "./components/etudiant/EditDoctor";
+import EditEtudiant from "./components/etudiant/EditEtudiant";
 import EtudiantProfile from "./components/etudiant/EtudiantProfile";
 //Patients...
 import PatientsList from "./components/patients/PatientsList";
@@ -176,7 +176,7 @@ const Approuter = () => {
           {/* Doctor  */}
           <Route path="/doctorlist" element={<EtudiantList />} />
           <Route path="/add-doctor" element={<AddEtudiant />} />
-          <Route path="/editdoctor" element={<EditDoctor />} />
+          <Route path="/editdoctor" element={<EditEtudiant />} />
           <Route path="/doctorprofile" element={<EtudiantProfile />} />
           <Route path="/doctor-setting" element={<Doctor_Settings />} />
           {/* Patients */}

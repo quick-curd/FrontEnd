@@ -10,7 +10,7 @@ import { DatePicker } from "antd";
 import Select from "react-select";
 
 
-const EditDoctor = () => {
+const EditEtudiant = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [options, setOptions] = useState([
     { value: 1, label: "Select City" },
@@ -839,4 +839,4 @@ const EditDoctor = () => {
   );
 };
 
-export default EditDoctor;
+export default EditEtudiant;
