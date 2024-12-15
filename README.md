@@ -1,3 +1,9 @@
+MANAH SOHAIB 
+mohammed daaouan
+BILaL CHEKHCHOU 
+nada  el ouarghi
+hicham dekhouch
+
 # Diabetes Management Web Application
 
 Welcome to the **Diabetes Management Web Application**. This app is designed to assist admin user in managing the application by providing tools to manage users, doctors.
