@@ -1,17 +1,55 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
-import { Link } from "react-router-dom";
+import { Link, Router, useNavigate } from "react-router-dom";
 import { favicon, imagesend } from "../imagepath";
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import { DatePicker } from "antd";
 import Select from "react-select";
+import {BACKEND_URL} from "../../config";
+import { useParams } from 'react-router-dom';
 
 
 const EditEtudiant = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const navigate=useNavigate()
+  const { id } = useParams();
+  const [formData, setFormData] = useState({
+    noEtudiantNat: "",
+    anneePro: "",
+    codeCom: "",
+    noEtudiantUbo: "",
+    sexe: "",
+    nom: "",
+    prenom: "",
+    dateNaissance: null,
+    lieuNaissance: "",
+    situation: "",
+    nationalite: "",
+    telPort: "",
+    telFixe: "",
+    email: "",
+    actuAdresse: "",
+    actuCp: "",
+    actuVille: "",
+    actuPays: "",
+    permAdresse: "",
+    permCp: "",
+    permVille: "",
+    permPays: "",
+    dernierDiplome: "",
+    universite: "",
+    sigleEtu: "",
+    compteCri: "",
+    uboEmail: "",
+    grpeAnglais: null,
+    abandonMotif: "",
+    abandonDate: null,
+    estDiplome: ""
+  });
+
   const [options, setOptions] = useState([
     { value: 1, label: "Select City" },
     { value: 2, label: "Alaska" },
@@ -41,13 +79,87 @@ const EditEtudiant = () => {
   const loadFile = (event) => {
     // Handle file loading logic here
   };
+
+  useEffect(() => {
+    // Fetch the student data when the component mounts
+    const fetchStudentData = async () => {
+      try {
+        const response = await fetch(BACKEND_URL+"/api/etudiants/"+id);
+        if (response.ok) {
+          const student = await response.json();
+          setFormData(student); // Fill the form with the student data
+        } else {
+          console.error("Failed to fetch student data");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    fetchStudentData();
+  }, [id]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+
+  // Handle update form submission
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    try {
+
+      const response = await fetch(BACKEND_URL+`/api/etudiants/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        const updatedStudent = await response.json();
+        console.log("Student updated successfully:", updatedStudent);
+        navigate("/"); // Redirect after successful update
+      } else {
+        console.error("Failed to update student");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+    navigate("/");
+  };
+
+  // Handle delete student
+  const handleDelete = async () => {
+    const confirmation = window.confirm("Are you sure you want to delete this student?");
+    if (confirmation) {
+      try {
+        const response = await fetch(BACKEND_URL+`/api/etudiants/${id}`, {
+          method: "DELETE"
+        });
+
+        if (response.ok) {
+          console.log("Student deleted successfully");
+          navigate("/etudiants"); // Redirect after successful deletion
+        } else {
+          console.error("Failed to delete student");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    }
+  };
+
+  
   return (
     <div>
       <Header />
       <Sidebar
         id="menu-item1"
         id1="menu-items1"
-        activeClassName="edit-doctor"
+        activeClassName="edit-etudiant"
       />
       <>
         <div className="page-wrapper">
@@ -65,7 +177,7 @@ const EditEtudiant = () => {
                         <FeatherIcon icon="chevron-right" />
                       </i>
                     </li>
-                    <li className="breadcrumb-item active">Edit Doctor</li>
+                    <li className="breadcrumb-item active">Edit Etudiant</li>
                   </ul>
                 </div>
               </div>
@@ -79,7 +191,7 @@ const EditEtudiant = () => {
                       <div className="row">
                         <div className="col-12">
                           <div className="form-heading">
-                            <h4>Doctor Details</h4>
+                            <h4>Etudiant Details</h4>
                           </div>
                         </div>
                         <div className="col-12 col-md-6 col-xl-4">
@@ -216,7 +328,7 @@ const EditEtudiant = () => {
                         <div className="col-12 col-md-6 col-xl-4">
                           <div className="form-group local-forms">
                             <label>
-                              Education <span className="login-danger">*</span>
+                               <span className="login-danger">*</span>
                             </label>
                             <input
                               className="form-control"
@@ -228,7 +340,7 @@ const EditEtudiant = () => {
                         <div className="col-12 col-md-6 col-xl-4">
                           <div className="form-group local-forms">
                             <label>
-                              Designation{" "}
+                              {" "}
                               <span className="login-danger">*</span>
                             </label>
                             <input
@@ -241,7 +353,7 @@ const EditEtudiant = () => {
                         <div className="col-12 col-md-6 col-xl-4">
                           <div className="form-group local-forms">
                             <label>
-                              Department <span className="login-danger">*</span>
+                               <span className="login-danger">*</span>
                             </label>
                             <Select
                               defaultValue={selectedOption}
@@ -299,7 +411,7 @@ const EditEtudiant = () => {
                         <div className="col-12 col-md-6 col-xl-3">
                           <div className="form-group local-forms">
                             <label>
-                              City <span className="login-danger">*</span>
+                              Ville <span className="login-danger">*</span>
                             </label>
                             <Select
                               menuPortalTarget={document.body}
@@ -342,7 +454,7 @@ const EditEtudiant = () => {
                         <div className="col-12 col-md-6 col-xl-3">
                           <div className="form-group local-forms">
                             <label>
-                              Country <span className="login-danger">*</span>
+                               <span className="login-danger">*</span>
                             </label>
                             <Select
                               menuPortalTarget={document.body}
@@ -532,7 +644,7 @@ const EditEtudiant = () => {
                           </div>
                         </div>
                         <div className="col-12">
-                          <div className="doctor-submit text-end">
+                          <div className="etudiant-submit text-end">
                             <button
                               type="submit"
                               className="btn btn-primary submit-form me-2"
@@ -826,9 +938,9 @@ const EditEtudiant = () => {
                   >
                     Close
                   </Link>
-                  <button type="submit" className="btn btn-danger">
-                    Delete
-                  </button>
+                
+                  <button type="button" className="btn btn-primary" onClick={handleUpdate}>Update</button>
+                        <button type="button" className="btn btn-danger" onClick={handleDelete}>Delete</button>
                 </div>
               </div>
             </div>

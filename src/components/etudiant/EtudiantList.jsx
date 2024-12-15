@@ -141,7 +141,7 @@ const EtudiantList = () => {
                             <i className="fas fa-ellipsis-v"/>
                         </Link>
                         <div className="dropdown-menu dropdown-menu-end">
-                            <Link className="dropdown-item" to="/editdoctor">
+                            <Link className="dropdown-item" to={`/editetudiant/${record.noEtudiantNat}`}>
                                 <i className="far fa-edit me-2"/>
                                 Edit
                             </Link>

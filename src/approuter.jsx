@@ -4,10 +4,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/pages/login";
 // import config from "config";
-import Addblog from "./components/pages/Blog/Addblog";
-import Editblog from "./components/pages/Blog/Editblog";
-import BlogView from "./components/pages/Blog/BlogView";
-import Blogdetails from "./components/pages/Blog/Blogdetails";
 //For Settings...
 // import Settings from "./components/settings/Settings";
 import Localization from "./components/settings/Localization";
@@ -145,11 +141,7 @@ const Approuter = () => {
           <Route path="/server-error" element={<ServerError />} />
           <Route path="/blankpage" element={<BlankPage />} />
           <Route path="/gallery" element={<GalleryImage />} />
-          {/* Blog */}
-          <Route path="/blog" element={<Blogdetails />} />
-          <Route path="/addblog" element={<Addblog />} />
-          <Route path="/editblog" element={<Editblog />} />
-          <Route path="/blogview" element={<BlogView />} />
+         
           {/* Settings */}
           <Route path="/settings" element={<Setting />} />
           <Route path="/localization" element={<Localization />} />
@@ -174,7 +166,7 @@ const Approuter = () => {
           {/* Doctor  */}
           <Route path="/etudiantlist" element={<EtudiantList />} />
           <Route path="/add-doctor" element={<AddEtudiant />} />
-          <Route path="/editdoctor" element={<EditEtudiant />} />
+          <Route path="/editetudiant/:id" element={<EditEtudiant />} />
           <Route path="/doctorprofile" element={<EtudiantProfile />} />
           <Route path="/doctor-setting" element={<Doctor_Settings />} />
           {/* Patients */}
